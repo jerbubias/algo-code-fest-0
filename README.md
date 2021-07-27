@@ -28,6 +28,6 @@ $(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/grasp1.o $(LIBS)
 ```
 4. Compile the problem model for the selected solvers and run them. In the following example, \textit{GRASP} is applied to the problem.
 ```bash
-[probX]$\$$ make
-[probX]$\$$ ./probX-grasp1 input.dat 0.4 1000
+[probX]$ make
+[probX]$ ./probX-grasp1 input.dat 0.3 1000
 ```
