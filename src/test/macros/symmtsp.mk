@@ -1,0 +1,144 @@
+# macros/default.mk
+# 
+# (C) 2021 Andreia P. Guerreiro <andreia.guerreiro@tecnico.ulisboa.pt>
+# 		   Carlos M. Fonseca <cmfonsec@dei.uc.pt>
+# 		   Samuel B. Outeiro <souteiro@student.dei.uc.pt>
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or (at
+# your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+
+### Problem Information ###
+
+PROBPATH = ../problem/$(PROBNAME)/
+PROBOBJ = $(PROBNAME).o
+PROBINIT = init/default.c
+
+##### Function Macros #####
+
+# ------------------------ #
+# -- Problem inspection -- #
+# ------------------------ #
+GETNUMCOMPONENTS=1
+GETMAXSOLUTIONSIZE=1
+GETMAXADDNEIGHBOURHOODSIZE=1
+GETMAXREMOVENEIGHBOURHOODSIZE=1
+GETMAXFORBIDNEIGHBOURHOODSIZE=0
+GETMAXPERMITNEIGHBOURHOODSIZE=0
+
+# ----------------------- #
+# -- Memory management -- #
+# ----------------------- #
+ALLOCSOLUTION=1
+ALLOCMOVE=1
+FREESOLUTION=1
+FREEMOVE=1
+
+# ----------------------- #
+# ------ Reporting ------ #
+# ----------------------- #
+PRINTPROBLEM=1
+PRINTSOLUTION=1
+PRINTMOVE=1
+
+# ----------------------- #
+# - Solution generation - #
+# ----------------------- #
+EMPTYSOLUTION=1
+HEURISTICSOLUTION=1
+
+# ----------------------- #
+# - Solution inspection - #
+# ----------------------- #
+GETOBJECTIVEVECTOR=1
+GETOBJECTIVELB=1
+GETNUMPRESENTSOLUTIONCOMPONENTS=1
+GETNUMUNDEFINEDSOLUTIONCOMPONENTS=1
+GETNUMFORBIDDENSOLUTIONCOMPONENTS=1
+ISFEASIBLE=1
+ISCOMPLETE=1
+ISDOMINANT=0
+CHECKDOMINANCE=0
+GETADDNEIGHBOURHOODSIZE=1
+GETREMOVENEIGHBOURHOODSIZE=1
+GETFORBIDNEIGHBOURHOODSIZE=0
+GETPERMITNEIGHBOURHOODSIZE=0
+ENUMPRESENTSOLUTIONCOMPONENTS=1
+ENUMUNDEFINEDSOLUTIONCOMPONENTS=0
+ENUMFORBIDDENSOLUTIONCOMPONENTS=0
+RESETENUMPRESENTSOLUTIONCOMPONENTS=1
+RESETENUMUNDEFINEDSOLUTIONCOMPONENTS=0
+RESETENUMFORBIDDENSOLUTIONCOMPONENTS=0
+
+# ----------------------- #
+# --- Move generation --- #
+# ----------------------- #
+ENUMADDMOVE=1
+ENUMREMOVEMOVE=0
+ENUMFORBIDMOVE=0
+ENUMPERMITMOVE=0
+RESETENUMADDMOVE=1
+RESETENUMREMOVEMOVE=0
+RESETENUMFORBIDMOVE=0
+RESETENUMPERMITMOVE=0
+HEURISTICADDMOVE=0
+HEURISTICREMOVEMOVE=0
+HEURISTICFORBIDMOVE=0
+HEURISTICPERMITMOVE=0
+HEURISTICADDMOVEWOR=0
+HEURISTICREMOVEMOVEWOR=0
+HEURISTICFORBIDMOVEWOR=0
+HEURISTICPERMITMOVEWOR=0
+RESETHEURISTICADDMOVEWOR=0
+RESETHEURISTICREMOVEMOVEWOR=0
+RESETHEURISTICFORBIDMOVEWOR=0
+RESETHEURISTICPERMITMOVEWOR=0
+RANDOMADDMOVE=1
+RANDOMREMOVEMOVE=0
+RANDOMFORBIDMOVE=0
+RANDOMPERMITMOVE=0
+RANDOMADDMOVEWOR=1
+RANDOMREMOVEMOVEWOR=0
+RANDOMFORBIDMOVEWOR=0
+RANDOMPERMITMOVEWOR=0
+RESETRANDOMADDMOVEWOR=1
+RESETRANDOMREMOVEMOVEWOR=0
+RESETRANDOMFORBIDMOVEWOR=0
+RESETRANDOMPERMITMOVEWOR=0
+
+# ----------------------- #
+# Operations on solutions #
+# ----------------------- #
+COPYSOLUTION=1
+APPLYADDMOVE=1
+APPLYREMOVEMOVE=1
+APPLYFORBIDMOVE=1
+APPLYPERMITMOVE=1
+
+# ----------------------- #
+# - Operations on moves - #
+# ----------------------- #
+COPYMOVE=1
+
+# ----------------------- #
+# --- Move inspection --- #
+# ----------------------- #
+GETCOMPONENTFROMMOVE=1
+GETADDHEURISTICVALUE=0
+GETREMOVEHEURISTICVALUE=0
+GETFORBIDHEURISTICVALUE=0
+GETPERMITHEURISTICVALUE=0
+GETADDOBJECTIVELBINCREMENT=1
+GETREMOVEOBJECTIVELBINCREMENT=1
+GETFORBIDOBJECTIVELBINCREMENT=1
+GETPERMITOBJECTIVELBINCREMENT=1
