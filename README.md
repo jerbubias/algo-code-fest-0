@@ -32,7 +32,7 @@ $(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/grasp1.o $(LIBS)
 # $(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/bd_ig.o $(LIBS)
 (...)
 ```
-4. Compile the problem model for the selected solvers and run them. In the following example, \textit{GRASP} is applied to the problem.
+4. Compile the problem model for the selected solvers and run them. In the following example, *GRASP* is applied to the problem.
 ```bash
 [probX]$ make
 [probX]$ ./probX-grasp1 input.dat 0.3 1000
