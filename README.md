@@ -22,7 +22,7 @@ In addition, development tools such as ``make`` (build automation), a debugger, 
 3. Edit the `Makefile` in the problem model directory to select (uncomment) or deselect (comment) the solvers to apply to the problem. In the following example, *GRASP* is selected and *Iterated Greedy with Biased Destruction* is not selected.
 ```bash
 [nasf4nio-cs]$ cd problem/problemX/
-[probX]$ more Makefile
+[problemX]$ more Makefile
 (...)
 PROG = problemX-grasp1
 (...)
@@ -34,6 +34,6 @@ $(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/grasp1.o $(LIBS)
 ```
 4. Compile the problem model for the selected solvers and run them. In the following example, *GRASP* is applied to the problem.
 ```bash
-[probX]$ make
-[probX]$ ./problemX-grasp1 <input data> 0.3 1000
+[problemX]$ make
+[problemX]$ ./problemX-grasp1 <input data> 0.3 1000
 ```
