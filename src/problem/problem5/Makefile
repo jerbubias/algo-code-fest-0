@@ -23,7 +23,7 @@ CC = gcc
 OPT = -O3 -g
 CFLAGS = -I$(IDIR) -Wall -Wextra
 LIBS = -lgsl -lgslcblas -lm
-PROG = prob5-aco_acs prob5-aco_as prob5-aco_eas prob5-aco_hcf prob5-aco_mmas prob5-aco_rbas prob5-bd_ig prob5-grasp1 prob5-hsc prob5-urd_ig
+PROG = problem5-aco_acs problem5-aco_as problem5-aco_eas problem5-aco_hcf problem5-aco_mmas problem5-aco_rbas problem5-bd_ig problem5-grasp1 problem5-hsc problem5-urd_ig
 
 .PHONY: all clean debug
 
@@ -35,37 +35,37 @@ clean:
 debug:
 		@$(MAKE) OPT+=-D__DEBUG__
 
-prob5-aco_acs:	prob5.o
+problem5-aco_acs:	problem5.o
 		$(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/aco_acs.o $(LIBS)
 
-prob5-aco_as:	prob5.o
+problem5-aco_as:	problem5.o
 		$(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/aco_as.o $(LIBS)
 
-prob5-aco_eas:	prob5.o
+problem5-aco_eas:	problem5.o
 		$(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/aco_eas.o $(LIBS)
 
-prob5-aco_hcf:	prob5.o
+problem5-aco_hcf:	problem5.o
 		$(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/aco_hcf.o $(LIBS)
 
-prob5-aco_mmas:	prob5.o
+problem5-aco_mmas:	problem5.o
 		$(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/aco_mmas.o $(LIBS)
 
-prob5-aco_rbas:	prob5.o
+problem5-aco_rbas:	problem5.o
 		$(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/aco_rbas.o $(UDIR)/minmax_heap.o $(LIBS)
 
-prob5-bd_ig:	prob5.o
+problem5-bd_ig:		problem5.o
 		$(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/bd_ig.o $(LIBS)
 
-prob5-grasp1:	prob5.o
+problem5-grasp1:	problem5.o
 		$(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/grasp1.o $(LIBS)
 
-prob5-hsc:		prob5.o
+problem5-hsc:		problem5.o
 		$(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/hsc.o $(LIBS)
 
-prob5-urd_ig:	prob5.o
+problem5-urd_ig:	problem5.o
 		$(CC) -o $@ $(CFLAGS) $(OPT) $^ $(SDIR)/urd_ig.o $(LIBS)
 
 %.o: %.c
 		$(CC) -c -o $@ $(CFLAGS) $(OPT) $<
 
-prob5.o: prob5.c
+problem5.o: problem5.c
