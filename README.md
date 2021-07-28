@@ -1,5 +1,11 @@
 # ALGO Code Fest #0
 
+# Software Requirements
+
+A modern C compiler such as a recent version of ``gcc`` or ``clang`` is required. The ability to compile against the GNU Scientific Library (v2.5 or later) is also required.
+
+In addition, development tools such as ``make`` (build automation), a debugger, and ``valgrind`` (dynamic analysis) will be very useful, but are not strictly required.
+
 # How to Compile a Problem to a Range of Solvers
 
 1. Compile utilities by running the `Makefile` in the `util` directory.
